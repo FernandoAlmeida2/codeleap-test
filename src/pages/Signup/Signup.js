@@ -1,8 +1,18 @@
 import { useState } from "react";
+import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
+import { changeUser } from "../../redux/userSlice";
 import { ButtonStyle, Container, InputStyle, SignupBox } from "./SignupStyles";
 
 export default function Signup() {
   const [username, setUsername] = useState("");
+  const dispatch = useDispatch();
+  //const navigate = useNavigate();
+
+  function handleClick(e) {
+    dispatch(changeUser(username));
+  }
+
   return (
     <Container>
       <SignupBox>
@@ -19,7 +29,7 @@ export default function Signup() {
           </label>
         </InputStyle>
         <ButtonStyle isEmpty={username === ''} >
-          <button disabled={username === ''}>ENTER</button>
+          <button disabled={username === ''} onClick={handleClick}>ENTER</button>
         </ButtonStyle>
       </SignupBox>
     </Container>
