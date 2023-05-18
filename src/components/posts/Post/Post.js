@@ -5,11 +5,13 @@ import { useSelector } from "react-redux";
 import DeleteModal from "../../DeleteModal";
 import { getTimePost } from "./utils";
 import { useState } from "react";
+import UpdateModal from "../../UpdateModal";
 
 export default function Post({ post, refreshPosts }) {
   const { username, created_datetime, title, content } = post;
   const { username: userLogged } = useSelector((state) => state.user);
   const [showDeleteModal, setDeleteModal] = useState(false);
+  const [showUpdateModal, setUpdateModal] = useState(false);
 
   const time_post = getTimePost(created_datetime);
 
@@ -18,7 +20,14 @@ export default function Post({ post, refreshPosts }) {
       {showDeleteModal && (
         <DeleteModal
           setDeleteModal={setDeleteModal}
-          postId={post.id}
+          post={post}
+          refreshPosts={refreshPosts}
+        />
+      )}
+      {showUpdateModal && (
+        <UpdateModal
+          setUpdateModal={setUpdateModal}
+          post={post}
           refreshPosts={refreshPosts}
         />
       )}
@@ -33,7 +42,12 @@ export default function Post({ post, refreshPosts }) {
                 size={23}
                 onClick={() => setDeleteModal(true)}
               />
-              <FiEdit color="white" cursor={"pointer"} size={23} />
+              <FiEdit
+                color="white"
+                cursor={"pointer"}
+                size={23}
+                onClick={() => setUpdateModal(true)}
+              />
             </IconsDiv>
           )}
         </TitleDiv>

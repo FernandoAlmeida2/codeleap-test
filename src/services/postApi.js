@@ -17,3 +17,9 @@ export async function deletePost(postId) {
 
     return response.data;
 }
+
+export async function updatePost(postId, body) {
+    const response = await api.patch(`/${postId}/`, body, {});
+
+    return response.data;
+} 
