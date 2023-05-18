@@ -5,3 +5,9 @@ export async function getPosts() {
 
     return response.data;
 }
+
+export async function sendPost(body) {
+    const response = await api.post("/", body, {});
+
+    return response.data;
+}

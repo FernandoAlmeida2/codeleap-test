@@ -1,19 +1,16 @@
-import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
+import { useSelector } from "react-redux";
+import { BrowserRouter } from "react-router-dom";
 import ResetStyle from "./assets/styles/Reset";
-import MainScreen from "./pages/MainScreen/MainScreen";
-import Signup from "./pages/Signup/Signup";
+import PrivateRoutes from "./routes/PrivateRoutes";
+import PublicRoutes from "./routes/PublicRoutes";
 
 function App() {
+  const { username } = useSelector((state) => state.user);
   return (
     <>
       <ResetStyle />
       <BrowserRouter>
-        <Routes>
-        <Route path="/" element={<Signup />} />
-        <Route path="/feed" element={<MainScreen />} />
-
-        <Route path="*" element={<Navigate to="/" />} />
-        </Routes>
+        {username ? <PrivateRoutes /> : <PublicRoutes />}
       </BrowserRouter>
     </>
   );
