@@ -20,7 +20,7 @@ export default function Post({ post, refreshPosts }) {
       {showDeleteModal && (
         <DeleteModal
           setDeleteModal={setDeleteModal}
-          post={post}
+          postId={post.id}
           refreshPosts={refreshPosts}
         />
       )}

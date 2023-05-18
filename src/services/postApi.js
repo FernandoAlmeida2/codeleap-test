@@ -1,7 +1,7 @@
 import api from "./api";
 
-export async function getPosts() {
-    const response = await api.get("/");
+export async function getPosts(page) {
+    const response = await api.get(`${page}`);
 
     return response.data;
 }
