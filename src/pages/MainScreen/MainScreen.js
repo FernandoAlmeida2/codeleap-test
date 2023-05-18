@@ -1,5 +1,27 @@
+import { useEffect, useState } from "react";
+import Header from "../../components/Header";
+import SearchingPosts from "../../components/posts/SearchingPosts";
+import { getPosts } from "../../services/postApi";
+import { Container, MainStyle } from "./MainScreenStyles";
+
 export default function MainScreen() {
-    return(
-        <div>Deu bom!</div>
-    )
+  const [posts, setPosts] = useState(null);
+
+  useEffect(() => {
+    getPosts()
+      .then((response) => {
+        setPosts(response);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }, []);
+  return (
+    <Container>
+      <MainStyle>
+        <Header />
+        <SearchingPosts />
+      </MainStyle>
+    </Container>
+  );
 }
