@@ -4,7 +4,7 @@ import userActions from "../actions/userActions";
 export const userSlice = createSlice({
   name: "user",
   initialState: {
-    username: "",
+    username: localStorage.getItem("username"),
   },
   reducers: userActions
 });

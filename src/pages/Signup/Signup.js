@@ -7,10 +7,12 @@ import { ButtonStyle, Container, InputStyle, SignupBox } from "./SignupStyles";
 export default function Signup() {
   const [username, setUsername] = useState("");
   const dispatch = useDispatch();
-  //const navigate = useNavigate();
+  const navigate = useNavigate();
 
-  function handleClick(e) {
+  function handleClick() {
     dispatch(changeUser(username));
+    localStorage.setItem('username', username);
+    navigate("/feed");
   }
 
   return (

@@ -44,7 +44,6 @@ export const InputStyle = styled.div`
       color: #cccccc;
       opacity: 1;
       font-size: 14px;
-      line-height: 16.41px;
     }
   }
 `;
