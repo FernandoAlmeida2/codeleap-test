@@ -6,11 +6,14 @@ export const Container = styled.div`
   width: 100vw;
   background-color: ${COLORS.background};
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  justify-content: center;
 `;
 
 export const MainStyle = styled.div`
-    width: 800px;
-    background-color: #FFFFFF;
-`
+  width: 800px;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+`;
