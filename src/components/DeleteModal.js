@@ -28,6 +28,8 @@ export default function DeleteModal({ setDeleteModal, postId, refreshPosts }) {
 
 const Container = styled.div`
   position: fixed;
+  left: 0;
+  top: 0;
   z-index: 2;
   min-height: 100%;
   width: 100%;

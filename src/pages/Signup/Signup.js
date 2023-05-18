@@ -9,8 +9,9 @@ export default function Signup() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  function handleClick(e) {
+  function handleClick() {
     dispatch(changeUser(username));
+    localStorage.setItem('username', username);
     navigate("/feed");
   }
 
