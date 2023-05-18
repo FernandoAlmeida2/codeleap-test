@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { useSelector } from "react-redux";
 import Header from "../../components/Header";
 import CreatePostForm from "../../components/posts/CreatePostForm/CreatePostForm";
 import Post from "../../components/posts/Post/Post";
@@ -10,8 +9,6 @@ import { Container, MainStyle } from "./MainScreenStyles";
 export default function MainScreen() {
   const [posts, setPosts] = useState(null);
   const [switchRefreshPosts, setRefreshPosts] = useState(false);
-
-  const { username } = useSelector((state) => state.user);
 
   function refreshPosts() {
     setRefreshPosts(!switchRefreshPosts);
@@ -35,7 +32,7 @@ export default function MainScreen() {
         {posts ? (
           <>
             {posts.results.map((post) => (
-              <Post key={post.id} post={post} />
+              <Post key={post.id} post={post} refreshPosts={refreshPosts} />
             ))}
           </>
         ) : (

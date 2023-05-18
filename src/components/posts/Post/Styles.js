@@ -18,6 +18,7 @@ export const TitleDiv = styled.div`
   padding-left: 24px;
   display: flex;
   align-items: center;
+  position: relative;
 
   h1 {
     font-weight: 700;
@@ -26,6 +27,14 @@ export const TitleDiv = styled.div`
     color: #ffffff;
   }
 `;
+
+export const IconsDiv = styled.div`
+  position: absolute;
+  right: 24px;
+  top: 24px;
+  display: flex;
+  gap: 32px;
+`
 
 export const PostInfo = styled.div`
   width: 100%;
@@ -51,3 +60,4 @@ export const PostContent = styled.p`
   font-size: 18px;
   overflow-y: auto;
 `;
+

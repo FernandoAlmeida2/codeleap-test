@@ -11,3 +11,9 @@ export async function sendPost(body) {
 
     return response.data;
 }
+
+export async function deletePost(postId) {
+    const response = await api.delete(`/${postId}/`);
+
+    return response.data;
+}
