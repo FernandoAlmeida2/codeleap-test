@@ -21,10 +21,10 @@ export const TitleDiv = styled.div`
   height: 70px;
   background-color: ${COLORS.blue};
   border-radius: 16px 16px 0px 0px;
-  padding-left: 24px;
+  padding: 0 24px;
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  position: relative;
 
   h1 {
     font-weight: 700;
@@ -35,7 +35,7 @@ export const TitleDiv = styled.div`
     width: 87.5vw;
     height: 8.14vw;
     border-radius: 2vw 2vw 0px 0px;
-    padding-left: 3.43vw;
+    padding: 0 3.43vw;
     h1 {
       font-size: 3vw;
     }
@@ -43,14 +43,9 @@ export const TitleDiv = styled.div`
 `;
 
 export const IconsDiv = styled.div`
-  position: absolute;
-  right: 24px;
-  top: 24px;
   display: flex;
   gap: 32px;
   @media (max-width: 700px) {
-    right: 3vw;
-    top: 3vw;
     gap: 3vw;
   }
 `;
