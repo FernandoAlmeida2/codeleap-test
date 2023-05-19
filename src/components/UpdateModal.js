@@ -86,6 +86,20 @@ const UpdateBox = styled.div`
     font-size: 16px;
     margin-bottom: 8px;
   }
+  @media (max-width: 700px) {
+    width: 80vw;
+    height: 40.5vw;
+    border-radius: 2.3vw;
+    padding: 3vw;
+    gap: 2vw;
+    h1 {
+      font-size: 3vw;
+    }
+    p {
+    font-size: 2.3vw;
+    margin-bottom: 1vw;
+  }
+  }
 `;
 
 const InputStyle = styled.input`
@@ -98,6 +112,15 @@ const InputStyle = styled.input`
     color: #cccccc;
     opacity: 1;
     font-size: 14px;
+  }
+  @media (max-width: 700px) {
+    width: 69.5vw;
+    height: 4.28vw;
+    border-radius: 1.14vw;
+    padding-left: 1.36vw;
+    ::placeholder {
+      font-size: 2vw;
+    }
   }
 `;
 
@@ -113,9 +136,19 @@ const ContentStyle = styled.textarea`
     opacity: 1;
     font-size: 14px;
   }
+  @media (max-width: 700px) {
+    width: 69.5vw;
+    height: 9.9vw;
+    border-radius: 1.14vw;
+    padding-left: 1.36vw;
+    padding-top: 1vw;
+    ::placeholder {
+      font-size: 2vw;
+    }
+  }
 `;
 
-export const ButtonsDiv = styled.div`
+const ButtonsDiv = styled.div`
   width: 100%;
   display: flex;
   justify-content: end;
@@ -126,6 +159,15 @@ export const ButtonsDiv = styled.div`
     border-radius: 8px;
     font-size: 16px;
     font-weight: 700;
+  }
+  @media (max-width: 700px) {
+    gap: 2.3vw;
+    button {
+      width: 16vw;
+      height: 4.28vw;
+      border-radius: 1.14vw;
+      font-size: 2.3vw;
+    }
   }
 `;
 

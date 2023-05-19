@@ -37,7 +37,6 @@ export default function MainScreen() {
     getPosts("")
       .then((response) => {
         setPosts(response);
-        console.log(response);
       })
       .catch((error) => {
         console.log(error);

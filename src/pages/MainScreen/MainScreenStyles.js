@@ -16,4 +16,8 @@ export const MainStyle = styled.div`
   flex-direction: column;
   align-items: center;
   gap: 24px;
+  @media (max-width: 700px) {
+    width: 114.3vw;
+    gap: 3.4vw;
+  }
 `;

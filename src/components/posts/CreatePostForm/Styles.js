@@ -21,6 +21,20 @@ export const CreatePostBox = styled.div`
     font-size: 16px;
     margin-bottom: 8px;
   }
+  @media (max-width: 700px) {
+    width: 87.5vw;
+    height: 39vw;
+    border-radius: 2.3vw;
+    padding: 3.43vw;
+    gap: 2.4vw;
+    h1 {
+      font-size: 3.14vw;
+    }
+    p {
+      font-size: 2.3vw;
+      margin-bottom: 1vw;
+    }
+  }
 `;
 
 export const InputStyle = styled.input`
@@ -33,6 +47,15 @@ export const InputStyle = styled.input`
     color: #cccccc;
     opacity: 1;
     font-size: 14px;
+  }
+  @media (max-width: 700px) {
+    width: 80vw;
+    height: 4.28vw;
+    border-radius: 1.14vw;
+    padding-left: 1.52vw;
+    ::placeholder {
+      font-size: 2vw;
+    }
   }
 `;
 
@@ -47,6 +70,16 @@ export const ContentStyle = styled.textarea`
     color: #cccccc;
     opacity: 1;
     font-size: 14px;
+  }
+  @media (max-width: 700px) {
+    width: 80vw;
+    height: 9.86vw;
+    border-radius: 1.14vw;
+    padding-left: 1.52vw;
+    padding-top: 1vw;
+    ::placeholder {
+      font-size: 2vw;
+    }
   }
 `;
 
@@ -65,5 +98,15 @@ export const ButtonStyle = styled.div`
     background-color: ${(props) => (props.isEmpty ? "#DDDDDD" : COLORS.blue)};
     cursor: ${(props) => (props.isEmpty ? "auto" : "pointer")};
     color: ${(props) => (props.isEmpty ? "#CCCCCC" : "#FFFFFF")};
+  }
+  @media (max-width: 700px) {
+    width: 80vw;
+    height: 4.28vw;
+    button {
+      width: 16vw;
+      height: 4.28vw;
+      border-radius: 1.14vw;
+      font-size: 2.3vw;
+    }
   }
 `;
