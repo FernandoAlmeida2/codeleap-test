@@ -39,13 +39,13 @@ export default function Post({ post, refreshPosts }) {
               <TbTrashXFilled
                 color="white"
                 cursor={"pointer"}
-                size={23}
+                size={"2.9vw"}
                 onClick={() => setDeleteModal(true)}
               />
               <FiEdit
                 color="white"
                 cursor={"pointer"}
-                size={23}
+                size={"2.9vw"}
                 onClick={() => setUpdateModal(true)}
               />
             </IconsDiv>

@@ -35,4 +35,14 @@ const HeaderStyle = styled.div`
     cursor: pointer;
     font-size: 16px;
   }
+  @media (max-width: 700px) {
+    min-height: 11.4vw;
+    padding: 0 10vw;
+    h1 {
+      font-size: 4.5vw;
+    }
+    p {
+      font-size: 3vw;
+    }
+  }
 `;

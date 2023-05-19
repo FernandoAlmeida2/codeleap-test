@@ -53,6 +53,16 @@ const DeleteBox = styled.div`
     font-size: 22px;
     font-weight: 700;
   }
+  @media (max-width: 700px) {
+    width: 80vw;
+    height: 17.7vw;
+    border-radius: 2.3vw;
+    padding: 3vw;
+    gap: 5vw;
+    h1 {
+      font-size: 3vw;
+    }
+  }
 `;
 
 const ButtonsDiv = styled.div`
@@ -65,6 +75,14 @@ const ButtonsDiv = styled.div`
     height: 32px;
     border-radius: 8px;
     cursor: pointer;
+  }
+  @media (max-width: 700px) {
+    gap: 2vw;
+    button {
+      width: 14.8vw;
+      height: 4vw;
+      border-radius: 1vw;
+    }
   }
 `;
 
