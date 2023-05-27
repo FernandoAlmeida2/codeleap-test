@@ -3,14 +3,14 @@ import styled from "styled-components";
 import { COLORS } from "../constants/colors";
 import { logout } from "../redux/userSlice";
 
-export default function Header() {
+export default function Header({ viewRef, isRefView }) {
   const dispatch = useDispatch();
   function makeLogout() {
     localStorage.setItem("username", "");
     dispatch(logout());
   }
   return (
-    <HeaderStyle>
+    <HeaderStyle ref={isRefView ? viewRef : null}>
       <h1>CodeLeap Network</h1>
       <p onClick={makeLogout}>Logout</p>
     </HeaderStyle>

@@ -7,7 +7,7 @@ import { getTimePost } from "./utils";
 import { useState } from "react";
 import UpdateModal from "../../UpdateModal";
 
-export default function Post({ post, refreshPosts }) {
+export default function Post({ post, refreshPosts, viewRef, isRefView }) {
   const { username, created_datetime, title, content } = post;
   const { username: userLogged } = useSelector((state) => state.user);
   const [showDeleteModal, setDeleteModal] = useState(false);
@@ -31,7 +31,7 @@ export default function Post({ post, refreshPosts }) {
           refreshPosts={refreshPosts}
         />
       )}
-      <PostBox>
+      <PostBox ref={isRefView ? viewRef : null}>
         <TitleDiv>
           <h1>{title}</h1>
           {username === userLogged && (
